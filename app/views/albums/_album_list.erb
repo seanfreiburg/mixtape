@@ -1,0 +1,21 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <% for i in 1..12 %>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div id="mycarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="item active">
+                <%= image_tag 'rich_gang.jpg', class: "img-responsive img-rounded img-album" %>
+                <div class="carousel-caption">
+
+                  <%= link_to 'Album', '#' %> by <%= link_to 'Artist', '#' %>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
