@@ -24,7 +24,7 @@ body {
   margin-bottom: 20px;
 }
 
-h1,h2,h3,h4,h5 {
+h1,h2,h3,h4,h5,p,label {
   color: white;
 }
 
@@ -56,12 +56,13 @@ body {
   font-size: 32px;
 }
 
-.footer {
+#footer {
   background: none;
   background-color: #101010;
   color: #777;
   padding-top: 5px;
   padding-bottom: 5px;
+
 
   a {
     color: #777;
@@ -74,4 +75,14 @@ body {
   }
 
 }
+
+form {
+  color: black;
+}
+
+a{
+  color: cornflowerblue;
+}
+
+
 

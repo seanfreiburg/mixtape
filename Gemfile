@@ -44,3 +44,6 @@ gem 'will_paginate'
 gem 'autoprefixer-rails'
 gem 'devise'
 
+gem "paperclip", "~> 4.2"
+
+

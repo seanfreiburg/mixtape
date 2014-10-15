@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :albums
 
+  get 'admin_panel' => 'admin_panel#index', as: :admin_panel
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

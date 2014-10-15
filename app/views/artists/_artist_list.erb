@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row">
+    <% @artists.each do |artist| %>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div id="mycarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="item active">
+                <%= image_tag artist.art.url, class: "img-responsive img-rounded img-album" %>
+                <div class="carousel-caption">
+
+                  <%= link_to artist.name, artist %>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
