@@ -1,12 +1,7 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <h1>hot</h1>
-    </div>
+<%= render partial: 'albums/album_list', locals: {albums: @hot_albums, title: 'hot'} %>
+<%= render partial: 'albums/album_list', locals: {albums: @new_albums, title: 'new'} %>
+<%= render partial: 'albums/album_list', locals: {albums: @top_albums, title: 'top'} %>
 
-  </div>
-</div>
 
-<%= render 'albums/album_list' %>
 
 

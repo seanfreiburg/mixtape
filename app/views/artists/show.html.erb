@@ -1,4 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row">
+    <p id="notice"><%= notice %></p>
+    <div class="col-md-12">
+      <h1><%= @artist.name %></h1>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <%= image_tag @artist.art.url(:medium), class: "img-responsive img-rounded img-album" %>
+      </div>
+    </div>
 
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
-<%= link_to 'Back', artists_path %>
+  </div>
+  <div class="row">
+    <%= link_to 'edit', edit_artist_path(@artist), class: 'btn btn-primary' if admin_signed_in? %>
+    <%= link_to 'delete', artist_path(@artist),method: :delete, class: 'btn btn-danger' if admin_signed_in? %>
+  </div>
+</div>
+

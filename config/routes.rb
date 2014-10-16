@@ -4,9 +4,13 @@ Rails.application.routes.draw do
 
   resources :artists
 
-  resources :albums
+
+  resources :albums, except: :index
+  get 'albums/order/(:order)' => 'albums#index', as: :albums_index
 
   get 'admin_panel' => 'admin_panel#index', as: :admin_panel
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

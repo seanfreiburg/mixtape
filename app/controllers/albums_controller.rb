@@ -7,6 +7,24 @@ class AlbumsController < ApplicationController
   # GET /albums.json
   def index
     @albums = Album.all
+    if params[:order] == 'new'
+      @albums = @albums.order(:created_at)
+    elsif params[:order]
+    end
+    case params[:order]
+      when 'new'
+        @albums = @albums.order(:created_at)
+      when 'top'
+        @albums = @albums.order(:created_at)
+      when 'rising'
+        @albums = @albums.order(:created_at)
+      when 'hot'
+        @albums = @albums.order(:created_at)
+      else
+
+    end
+    @title = params[:order]
+
   end
 
   # GET /albums/1
@@ -17,6 +35,7 @@ class AlbumsController < ApplicationController
   # GET /albums/new
   def new
     @album = Album.new
+    @artists = Artist.all
   end
 
   # GET /albums/1/edit
@@ -71,6 +90,6 @@ class AlbumsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def album_params
-      params[:album]
+      params.require(:album).permit(:title,:art,:artist_id)
     end
 end

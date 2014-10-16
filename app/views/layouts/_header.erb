@@ -13,10 +13,10 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
       <ul class="nav navbar-nav">
-        <li><a href="#">hot</a></li>
-        <li><a href="#">new</a></li>
-        <li><a href="#">rising</a></li>
-        <li><a href="#">top</a></li>
+        <li><%= link_to 'hot', albums_index_path('hot') %></li>
+        <li><%= link_to 'newest', albums_index_path('newest') %></li>
+        <li><%= link_to 'rising', albums_index_path('rising') %></li>
+        <li><%= link_to 'top', albums_index_path('top') %></li>
         <li><%= link_to 'artists', artists_path %></li>
         <li><%= link_to 'songs', songs_path %></li>
         <% if admin_signed_in? %>
